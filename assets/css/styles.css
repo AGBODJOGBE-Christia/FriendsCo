@@ -1,0 +1,195 @@
+/* --- IMPORT POLICE (Optionnel: si vous n'avez pas Inter, le navigateur utilisera sa police par défaut) --- */
+@import url('https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap');
+
+/* --- RESET & GLOBAL --- */
+* { 
+    box-sizing: border-box; 
+    margin: 0; 
+    padding: 0; 
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; 
+}
+body { 
+    background-color: #faf8f5; /* Beige crémeux très doux */
+    color: #2c2420; /* Marron foncé/gris pour la douceur */
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* --- TYPOGRAPHIE & TEXTES --- */
+h1, h2, h3, h4 { font-weight: 600; color: #2c2420; letter-spacing: -0.3px; }
+a { text-decoration: none; color: inherit; transition: all 0.25s ease; }
+
+/* --- NAVIGATION (Overlay transparent / Ivoire) --- */
+nav {
+    background: rgba(253, 252, 251, 0.92);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    height: 72px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 40px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid rgba(200, 180, 170, 0.15);
+    box-shadow: 0 4px 20px rgba(140, 120, 110, 0.04);
+}
+nav a {
+    color: #5a4c45;
+    font-weight: 500;
+    padding: 8px 18px;
+    border-radius: 30px;
+}
+nav a:hover { background: rgba(214, 143, 124, 0.10); color: #2c2420; }
+nav button {
+    background: #d68f7c; /* Saumon doux */
+    color: #fff; 
+    border: none; 
+    padding: 10px 24px; 
+    border-radius: 30px;
+    cursor: pointer; 
+    font-weight: 600; 
+    transition: all 0.25s ease;
+    box-shadow: 0 4px 8px rgba(214, 143, 124, 0.15);
+}
+nav button:hover { 
+    background: #c97d69; 
+    transform: translateY(-2px); 
+    box-shadow: 0 6px 12px rgba(214, 143, 124, 0.25);
+}
+
+/* --- AUTHENTIFICATION --- */
+.auth-container {
+    background: #ffffff; width: 100%; max-width: 440px; margin: 80px auto;
+    padding: 45px; border-radius: 28px; 
+    box-shadow: 0 20px 40px rgba(140, 120, 110, 0.06), 0 4px 12px rgba(140, 120, 110, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.8);
+}
+.auth-container h2 { color: #2c2420; text-align: center; margin-bottom: 30px; font-size: 28px; letter-spacing: -0.5px; }
+.auth-container input {
+    width: 100%; padding: 14px 16px; margin-bottom: 20px;
+    background: #fcfaf9; border: 1px solid #e6ddd8; border-radius: 16px; font-size: 15px; outline: none; transition: 0.25s;
+}
+.auth-container input:focus { border-color: #d68f7c; background: #fff; box-shadow: 0 0 0 4px rgba(214, 143, 124, 0.08); }
+.auth-container button {
+    width: 100%; padding: 14px; background-color: #d68f7c; color: white;
+    border: none; border-radius: 16px; font-weight: 600; font-size: 16px; cursor: pointer; transition: 0.25s;
+}
+.auth-container button:hover { background: #c97d69; transform: translateY(-2px); }
+.auth-link { text-align: center; margin-top: 22px; font-size: 14px; color: #7a6b64; }
+.auth-link a { color: #d68f7c; font-weight: 600; }
+.auth-link a:hover { color: #c97d69; }
+.message-box {
+    margin-top: 20px; padding: 12px; border-radius: 12px; text-align: center; font-size: 14px; display: none;
+}
+.message-box.error { display: block; background: #fcf3f1; color: #8f4d3c; border: 1px solid #fae1dc; }
+.message-box.success { display: block; background: #f3faf6; color: #3b6b50; border: 1px solid #d9efe4; }
+
+/* --- CONTAINER GLOBAL --- */
+.container { max-width: 740px; margin: 40px auto; padding: 0 20px; }
+
+/* --- CRÉATION DE POST --- */
+.create-post-box {
+    background: #fdfcfb; padding: 28px; border-radius: 24px; 
+    box-shadow: 0 8px 24px rgba(140, 120, 110, 0.04); margin-bottom: 30px; 
+    border: 1px solid rgba(200, 180, 170, 0.15);
+}
+.create-post-box textarea {
+    width: 100%; height: 70px; border: none; resize: none; font-size: 16px; outline: none; color: #2c2420; background: transparent;
+}
+.create-post-box textarea::placeholder { color: #9a8a82; }
+.create-post-box input[type="file"] { margin-top: 12px; font-size: 14px; color: #7a6b64; }
+.create-post-box button {
+    margin-top: 15px; padding: 10px 28px; background: #d68f7c; color: white; border: none; border-radius: 30px; cursor: pointer; font-weight: 500; transition: 0.25s;
+}
+.create-post-box button:hover { background: #c97d69; transform: translateY(-2px); }
+
+/* --- CARTE DE POST --- */
+.post-card {
+    background: #fdfcfb; border-radius: 24px; padding: 28px; margin-bottom: 30px;
+    box-shadow: 0 8px 24px rgba(140, 120, 110, 0.04); border: 1px solid rgba(200, 180, 170, 0.15);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.post-card:hover { transform: translateY(-4px); box-shadow: 0 12px 32px rgba(140, 120, 110, 0.08); }
+.post-header { display: flex; align-items: center; gap: 16px; margin-bottom: 16px; }
+.avatar { width: 50px; height: 50px; border-radius: 50%; object-fit: cover; border: 2px solid #f3efec; }
+.post-header strong { font-size: 16px; color: #2c2420; }
+.post-header small { color: #9a8a82; font-size: 13px; }
+.post-content p { margin: 14px 0; font-size: 16px; line-height: 1.6; color: #3d332e; }
+.post-image { width: 100%; max-height: 450px; object-fit: cover; border-radius: 18px; margin-top: 14px; }
+.post-actions { display: flex; gap: 24px; border-top: 1px solid #f0e9e5; padding-top: 18px; margin-top: 18px; }
+.post-actions button {
+    background: transparent; border: none; cursor: pointer; font-size: 14px; color: #7a6b64; 
+    display: flex; align-items: center; gap: 8px; font-weight: 500; transition: 0.25s;
+}
+.post-actions button:hover { color: #2c2420; }
+.active-like { color: #d68f7c !important; font-weight: 600; }
+.active-dislike { color: #d68f7c !important; font-weight: 600; opacity: 0.7; }
+
+/* --- COMMENTAIRES --- */
+.comments-section { margin-top: 20px; border-top: 1px solid #f0e9e5; padding-top: 18px; }
+.comment-item { display: flex; gap: 14px; margin-bottom: 16px; background: #fcfaf9; padding: 14px; border-radius: 16px; }
+.mini-avatar { width: 36px; height: 36px; border-radius: 50%; object-fit: cover; }
+.comment-item strong { font-size: 14px; color: #2c2420; }
+.comment-item p { margin: 4px 0; font-size: 14px; color: #3d332e; }
+.comment-item small { font-size: 12px; color: #9a8a82; }
+.add-comment-box { display: flex; gap: 12px; margin-top: 14px; }
+.add-comment-box input { flex: 1; padding: 12px 18px; background: #fcfaf9; border: 1px solid #e6ddd8; border-radius: 30px; outline: none; transition: 0.25s; }
+.add-comment-box input:focus { border-color: #d68f7c; background: #fff; }
+.add-comment-box button { background: #d68f7c; color: white; border: none; padding: 10px 24px; border-radius: 30px; cursor: pointer; font-weight: 500; transition: 0.25s; }
+.add-comment-box button:hover { background: #c97d69; }
+
+/* --- PROFIL --- */
+#profileForm { background: #fdfcfb; padding: 36px; border-radius: 24px; box-shadow: 0 8px 24px rgba(140, 120, 110, 0.04); border: 1px solid rgba(200, 180, 170, 0.15); }
+#profileForm .form-group { margin-bottom: 22px; }
+#profileForm label { display: block; font-weight: 500; margin-bottom: 8px; color: #5a4c45; font-size: 14px; }
+#profileForm input, #profileForm textarea {
+    width: 100%; padding: 14px 18px; background: #fcfaf9; border: 1px solid #e6ddd8; border-radius: 16px; font-size: 15px; transition: 0.25s; outline: none;
+}
+#profileForm input:focus, #profileForm textarea:focus { border-color: #d68f7c; background: #fff; }
+#profileForm textarea { height: 110px; resize: vertical; }
+#avatarPreview { margin-bottom: 18px; border-radius: 50%; border: 3px solid #f3efec; box-shadow: 0 4px 12px rgba(140, 120, 110, 0.06); }
+
+/* --- GESTION AMIS --- */
+.user-row {
+    display: flex; align-items: center; justify-content: space-between;
+    background: #fdfcfb; padding: 18px 22px; border-radius: 18px; margin-bottom: 14px; 
+    box-shadow: 0 4px 12px rgba(140, 120, 110, 0.03); border: 1px solid rgba(200, 180, 170, 0.12);
+}
+.user-row span { flex: 1; margin-left: 18px; font-weight: 500; color: #2c2420; }
+.friend-action {
+    padding: 8px 18px; border: none; border-radius: 30px; cursor: pointer; font-weight: 500; 
+    transition: 0.25s; margin-left: 8px; background: #f3efec; color: #2c2420;
+}
+.friend-action:hover { background: #e6ddd8; }
+
+/* --- CHAT INTERFACE --- */
+.chat-container { 
+    display: flex; height: 82vh; max-width: 1000px; margin: 40px auto; 
+    background: #fdfcfb; border-radius: 28px; overflow: hidden; 
+    box-shadow: 0 20px 40px rgba(140, 120, 110, 0.06); border: 1px solid rgba(200, 180, 170, 0.15);
+}
+.chat-container .sidebar { width: 320px; border-right: 1px solid #f0e9e5; display: flex; flex-direction: column; background: #fcfaf9; }
+.chat-container .sidebar h3 { padding: 28px; margin: 0; border-bottom: 1px solid #f0e9e5; font-size: 18px; color: #2c2420; }
+#contactsList { overflow-y: auto; flex: 1; padding: 10px; }
+.contact-item {
+    padding: 14px 18px; display: flex; align-items: center; gap: 16px; cursor: pointer; 
+    border-radius: 16px; transition: 0.25s; margin-bottom: 6px;
+}
+.contact-item:hover, .contact-item.active { background: #f3efec; }
+.contact-item img { width: 46px; height: 46px; border-radius: 50%; object-fit: cover; }
+.chat-container .chat-box { flex: 1; display: flex; flex-direction: column; background: #faf8f5; }
+#chatHeader { padding: 28px; border-bottom: 1px solid #f0e9e5; font-weight: 600; font-size: 18px; background: #fff; color: #2c2420; }
+#messagesContainer {
+    flex: 1; padding: 28px; overflow-y: auto; display: flex; flex-direction: column; gap: 14px;
+}
+.msg-sent { align-self: flex-end; background: #d68f7c; color: white; padding: 14px 22px; border-radius: 24px 24px 4px 24px; max-width: 70%; font-size: 15px; box-shadow: 0 4px 8px rgba(214, 143, 124, 0.15); }
+.msg-received { align-self: flex-start; background: #f3efec; color: #2c2420; padding: 14px 22px; border-radius: 24px 24px 24px 4px; max-width: 70%; font-size: 15px; }
+.message-input-box {
+    display: none; padding: 24px; border-top: 1px solid #f0e9e5; background: #fff; gap: 14px; align-items: center;
+}
+.message-input-box input { flex: 1; padding: 14px 22px; background: #fcfaf9; border: 1px solid #e6ddd8; border-radius: 30px; outline: none; font-size: 15px; transition: 0.25s; }
+.message-input-box input:focus { border-color: #d68f7c; }
+.message-input-box button { background: #d68f7c; color: white; border: none; padding: 12px 30px; border-radius: 30px; cursor: pointer; font-weight: 500; transition: 0.25s; }
+.message-input-box button:hover { background: #c97d69; }

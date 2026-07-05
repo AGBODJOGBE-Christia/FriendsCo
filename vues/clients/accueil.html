@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Fil d'actualité</title>
+    <link rel="stylesheet" href="../../assets/css/styles.css">
+</head>
+<body>
+    <nav>
+        <a href="accueil.html">Accueil</a>
+        <a href="profil.html">Profil</a>
+        <a href="amis.html">Amis</a>
+        <a href="chat.html">Chat</a>
+        <a id="adminAccessLink" href="../back-office/dashboard.html" style="display: none; background: #0f172a; color: white; border-radius: 30px; padding: 8px 16px;">🔐 Admin</a>
+        <button id="logoutBtn">Déconnexion</button>
+    </nav>
+
+    <div class="container">
+        <!-- Formulaire de création de post -->
+        <div class="create-post-box">
+            <h3>Créer une publication</h3>
+            <form id="postForm">
+                <textarea id="postContent" placeholder="Quoi de neuf ?" required></textarea>
+                <input type="file" id="postImage" accept="image/*">
+                <button type="submit">Publier</button>
+            </form>
+        </div>
+
+        <!-- Fil d'actualité -->
+        <div id="feed"></div>
+    </div>
+
+    <script src="../../assets/js/feed.js"></script>
+    <script src="../../assets/js/logout.js"></script>
+</body>
+</html>

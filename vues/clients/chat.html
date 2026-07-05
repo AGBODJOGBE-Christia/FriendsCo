@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Messagerie</title>
+    <link rel="stylesheet" href="../../assets/css/styles.css">
+</head>
+<body>
+    <nav>
+        <a href="accueil.html">Accueil</a>
+        <a href="profil.html">Profil</a>
+        <a href="amis.html">Amis</a>
+        <a href="chat.html">Chat</a>
+        <button id="logoutBtn">Déconnexion</button>
+    </nav>
+
+    <div class="chat-container">
+        <div class="sidebar">
+            <h3>Contacts</h3>
+            <div id="contactsList"></div>
+        </div>
+        <div class="chat-box">
+            <div id="chatHeader">Sélectionnez un contact</div>
+            <div id="messagesContainer"></div>
+            <div class="message-input-box" style="display:none;">
+                <input type="text" id="msgInput" placeholder="Écrivez un message...">
+                <button id="sendMsgBtn">Envoyer</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="../../assets/js/chat.js"></script>
+    <script src="../../assets/js/logout.js"></script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Back-Office - Connexion</title>
+    <link rel="stylesheet" href="../../assets/css/admin.css">
+</head>
+<body>
+    <div class="login-container">
+        <h2>Espace Administration</h2>
+        <form id="adminLoginForm">
+            <input type="email" id="email" placeholder="Email Admin" required>
+            <input type="password" id="password" placeholder="Mot de passe" required>
+            <button type="submit">Se connecter</button>
+        </form>
+        <div id="loginMessage" class="message"></div>
+    </div>
+    <p style="text-align: center; margin-top: 20px; font-size: 14px; color: #64748b;">
+        Vous êtes un utilisateur standard ? 
+        <a href="../../vues/clients/login.html" style="color: #0f172a; font-weight: 600; text-decoration: none;">Retour à l'accueil client</a>
+    </p>
+</div>
+    <script src="../../assets/js/admin-auth.js"></script>
+</body>
+</html>

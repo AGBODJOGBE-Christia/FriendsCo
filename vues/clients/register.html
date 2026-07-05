@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inscription - Réseau Social</title>
+    <link rel="stylesheet" href="../../assets/css/styles.css">
+</head>
+<body>
+    <div class="auth-container">
+        <h2>Créer un compte</h2>
+        
+        <form id="registerForm">
+            <div class="form-group">
+                <label for="nom">Nom</label>
+                <input type="text" id="nom" placeholder="Votre nom" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="prenom">Prénom</label>
+                <input type="text" id="prenom" placeholder="Votre prénom" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" placeholder="exemple@email.com" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="password">Mot de passe</label>
+                <input type="password" id="password" placeholder="Minimum 6 caractères" required minlength="6">
+            </div>
+
+            <button type="submit">S'inscrire</button>
+            
+            <p class="auth-link">
+                Déjà un compte ? <a href="login.html">Connectez-vous</a>
+            </p>
+        </form>
+        
+        <!-- Zone d'affichage des messages de succès ou d'erreur -->
+        <div id="message" class="message-box"></div>
+    </div>
+    <script src="../../assets/js/auth.js"></script>
+</body>
+</html>
